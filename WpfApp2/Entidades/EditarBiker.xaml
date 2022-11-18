@@ -1,0 +1,25 @@
+﻿<Window x:Class="WpfApp2.Entidades.EditarBiker"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp2.Entidades"
+        mc:Ignorable="d"
+             Title="EditarBiker" Height="528" Width="395">
+    <Grid>
+        <Label Content="Editar Competidor
+               " HorizontalAlignment="Center" Margin="0,58,0,0" VerticalAlignment="Top" Width="130" FontWeight="Bold" FontSize="14"/>
+        <StackPanel Margin="38,107,38,68">
+            <Label Content="Numero de Indentificação:"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding Inscricao}" Width="120" Margin="0,6,0,10" IsEnabled="False"/>
+            <Label Content="Nome:"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding NomeCompleto}" Width="120" Margin="0,0,0,10"/>
+            <Label Content="Idade:"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding Idade}" Width="120" Margin="0,0,0,10"/>
+            <Label Content="Cidade:"/>
+            <TextBox TextWrapping="Wrap" Text="{Binding Cidade}" Width="120" Margin="0,0,0,15"/>
+            <Button Content="Editar" RenderTransformOrigin="0.502,4.812" Width="219" Click="bnt_salvar"/>
+        </StackPanel>
+
+    </Grid>
+</Window>
