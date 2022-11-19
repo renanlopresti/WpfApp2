@@ -49,7 +49,7 @@ namespace WpfApp2.Entidades.DataBases
             Conectar();
             List<Biker> listBikers = new List<Biker>();
 
-            command.CommandText = "Select * From Biker ORDER BY total DESC";
+            command.CommandText = "Select * From Biker Order By Total";
             using (dr = command.ExecuteReader())
             {
                 if (dr.HasRows)
