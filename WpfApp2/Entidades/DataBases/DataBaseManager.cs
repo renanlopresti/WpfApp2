@@ -18,7 +18,9 @@ namespace WpfApp2.Entidades.DataBases
         public void AdicionaBiker(Biker newBiker)
         {
             if (newBiker.NomeCompleto == null) throw new Exception("Campo nome não pode ser nulo");
+            if (newBiker.NomeCompleto.Length <= 0) throw new ArgumentNullException("Campo nome não pode ser nulo");
             if (newBiker.Cidade == null) throw new Exception("Campo cidade não pode ser nulo");
+            if (newBiker.Cidade.Length <= 0) throw new ArgumentNullException("Campo cidade não pode ser nulo");
             if (newBiker.Idade < 13) throw new Exception("Atletas menores do que 13 anos não podem se inscrever");
 
             DataBase.AdicionaBiker(newBiker);
